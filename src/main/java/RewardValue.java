@@ -6,17 +6,19 @@ public class RewardValue{
 
   public RewardValue(int inputMiles){
     mileRewards = inputMiles;
+    cashValue = mileRewards / 0.0035;
   }
 
   public RewardValue(double inputCashValue){
     cashValue = inputCashValue;
+    mileRewards = cashValue * 0.0035;
   }
   public double getCashValue(){
-    return mileRewards / 0.0035;
+    return cashValue;
   }
   
   public double getMilesValue(){
-    return cashValue * 0.0035;
+    return mileRewards;
   }
 
   
